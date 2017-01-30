@@ -1,3 +1,9 @@
-<% @roasts.each do |roast| %>
-  <%= roast.roast_method %>
-<% end %>
+<div class='container'> 
+	<h1>Roasts</h1>
+<hr>
+	<% @roasts.each do |roast| %>
+	  <p><%= roast.roast_method %></p>
+	<% end %>
+
+	<%= link_to"Create New Roast", new_roast_path, class: 'btn btn-info btn-lg' %>
+</div>

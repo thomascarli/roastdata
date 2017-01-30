@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'devise', '~> 4.2'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -40,6 +41,7 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'pry'
 end
 
 group :development do

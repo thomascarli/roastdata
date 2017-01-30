@@ -1,0 +1,43 @@
+<!-- 
+<div class="container">
+	<h1 class="align-center">New Roast Form </h1>
+	<%#= form_for @roast, url: {action: "create"}, html: {class: 'form-horizontal'} do |r| %>
+
+		<div class="form-group">
+		  <%#= r.text_field :roast_method, class: "form-control", :placeholder => "Roast Method ex.'Whirly pop'" %>
+	  </div>
+		<div class="form-group">
+		  <%#= r.date_field :date_of_roast, class: "form-control", :placeholder => 'Date of Roast' %>
+	  </div>
+		<div class="form-group">
+		  <%#= r.text_field :bean_species, class: "form-control", :placeholder => 'Bean Species' %>
+	  </div>
+	  <div class="form-group">
+		  <#= r.text_field :roast_time, class: "form-control", :placeholder => "Roast Time in seconds" %>
+	  </div>
+	   <div class="form-group">
+		  <%#= r.text_field :roast_profile, class: "form-control", :placeholder => 'Roast Profile' %>
+	  </div>
+	   <div class="form-group">
+		  <%#= r.text_field :avg_temp_roast, class: "form-control", :placeholder => 'Avg Temp Roast' %>
+	  </div>
+	   <div class="form-group">
+		  <%#= r.text_field :storage, class: "form-control", :placeholder => 'Storage' %>
+	  </div>
+
+	  <%#= r.submit 'Save', class: 'btn btn-primary btn-block' %>
+
+	<%# end %>
+</div>
+
+
+ -->
+ <%= @roast.inspect %>
+<hr>
+ <%= form_for({controller: "roast", action: "create"}, method: "post") do |r| %>
+	<div class="form-group">
+		 	<%= r.text_field :roast_method, class: "form-control", :placeholder => "Roast Method ex.'Whirly pop'" %>
+	 </div>
+	 <%= r.submit 'Save', class: 'btn btn-primary btn-block' %>
+ <% end %>
+
