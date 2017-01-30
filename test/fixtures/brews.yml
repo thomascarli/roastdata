@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  roast_id: 1
+  brew_method: MyString
+  time_of_brew: 2017-01-29 23:55:48
+  qty_of_beans: 1
+  bitterness: 1
+  complexity: 1
+  acidity: 1
+  overall: 1
+  texture: MyString
+  comments: MyText
+  user_id: 1
+
+two:
+  roast_id: 1
+  brew_method: MyString
+  time_of_brew: 2017-01-29 23:55:48
+  qty_of_beans: 1
+  bitterness: 1
+  complexity: 1
+  acidity: 1
+  overall: 1
+  texture: MyString
+  comments: MyText
+  user_id: 1
