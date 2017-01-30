@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  roast_method: MyString
+  date_of_roast: 2017-01-29 23:49:40
+  bean_species: MyString
+  roast_time: 1
+  time_of_roast: 2017-01-29 23:49:40
+  roast_profile: MyString
+  avg_temp_roast: 1
+  raw_weight: 1
+  storage: MyString
+
+two:
+  roast_method: MyString
+  date_of_roast: 2017-01-29 23:49:40
+  bean_species: MyString
+  roast_time: 1
+  time_of_roast: 2017-01-29 23:49:40
+  roast_profile: MyString
+  avg_temp_roast: 1
+  raw_weight: 1
+  storage: MyString
