@@ -1,3 +1,45 @@
-<% @roasts.each do |roast| %>
-  <%= roast.roast_method %>
-<% end %>
+<div class='container'> 
+	<h1>Roasts</h1>
+<hr>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>
+							Roast Method
+						</th>
+						<th>
+							Date of Roast
+						</th>
+						<th>
+							Bean Species
+						</th>
+						<th>
+							Time Roasted
+						</th>
+						<th>
+							view more...
+						</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<% @roasts.each do |roast| %>
+					<tr>
+						<td><%= roast.id %></td>
+						<td><%= roast.roast_method %></td>
+						<td><%= roast.date_of_roast %></td>
+						<td><%= roast.bean_species %></td>
+						<td><%= roast.roast_time %></td>
+						<td><%= link_to'view',roast_path(roast.id), class: 'btn btn-success' %></td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

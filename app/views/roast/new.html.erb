@@ -1,0 +1,81 @@
+<!-- 
+<div class="container">
+	<h1 class="align-center">New Roast Form </h1>
+	<%#= form_for @roast, url: {action: "create"}, html: {class: 'form-horizontal'} do |r| %>
+
+		<div class="form-group">
+		  <%#= r.text_field :roast_method, class: "form-control", :placeholder => "Roast Method ex.'Whirly pop'" %>
+	  </div>
+		<div class="form-group">
+		  <%#= r.date_field :date_of_roast, class: "form-control", :placeholder => 'Date of Roast' %>
+	  </div>
+		<div class="form-group">
+		  <%#= r.text_field :bean_species, class: "form-control", :placeholder => 'Bean Species' %>
+	  </div>
+	  <div class="form-group">
+		  <#= r.text_field :roast_time, class: "form-control", :placeholder => "Roast Time in seconds" %>
+	  </div>
+	   <div class="form-group">
+		  <%#= r.text_field :roast_profile, class: "form-control", :placeholder => 'Roast Profile' %>
+	  </div>
+	   <div class="form-group">
+		  <%#= r.text_field :avg_temp_roast, class: "form-control", :placeholder => 'Avg Temp Roast' %>
+	  </div>
+	   <div class="form-group">
+		  <%#= r.text_field :storage, class: "form-control", :placeholder => 'Storage' %>
+	  </div>
+
+	  <%#= r.submit 'Save', class: 'btn btn-primary btn-block' %>
+
+	<%# end %>
+</div>
+
+
+ -->
+ <div class="container">
+	 <div class="row">
+	 <%= form_tag(controller: "roast", action: "create", method: "post") do %>
+		<div class="row col-md-12">
+			<div class="form-group col-md-4">
+				<%= label_tag('Roast Method') %>
+				<%= text_field_tag(:roast_method,nil, class: 'form-control', :placeholder => "ex.'Whirly pop'") %>
+			</div>
+			<div class="form-group col-md-4">
+				<%= label_tag('Date of Roast') %>
+				<%= date_field_tag(:date_of_roast,nil, class: "form-control") %>
+			</div>
+			<div class="form-group col-md-4">
+				<%= label_tag('Bean Species') %>
+				<%= text_field_tag(:bean_species,nil, class: "form-control", :placeholder => "ex. 'Arabica'" )%>
+			</div>
+		</div>
+	
+		
+		<div class="row col-md-12">
+			<div class="form-group col-md-4">
+				<%= text_field_tag(:roast_time,nil, class: "form-control", :placeholder => "Roast Time in seconds") %>
+			</div>
+			<div class="form-group col-md-4">
+				<%= text_field_tag(:raw_weight,nil, class: "form-control", :placeholder => "Raw bean weight") %>
+			</div>
+			<div class="form-group col-md-4">
+				<%= text_field_tag(:avg_temp_roast,nil, class: "form-control", :placeholder => 'Avg Temp Roast') %>
+			</div>
+		</div>
+
+		<div class="row col-md-12">
+			<div class="form-group col-md-8">
+				<%= text_field_tag(:roast_profile,nil, class: "form-control", :placeholder => 'Roast Profile') %>
+			</div>
+			<div class="form-group col-md-4">
+				<%= text_field_tag(:storage,nil, class: "form-control", :placeholder => 'Storage') %>
+			</div>
+		</div>
+
+
+		 <%= submit_tag('Save', class: 'btn btn-primary btn-lg') %>
+	 <% end %>
+	 </div>
+	 <hr class="col-md-12">
+ </div>
+

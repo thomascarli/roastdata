@@ -1,4 +1,4 @@
-class Roast < ActiveRecord::Base
+class Roast < ApplicationRecord
 
   has_many :brews
 end
