@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   root to: 'roast#index'
 
   resources :roast do
-  	post 'create'
-
     resources :brew do
     end
   end
