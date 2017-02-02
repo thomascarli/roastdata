@@ -1,0 +1,90 @@
+<h1> New Roast</h1>
+
+<div class="row col-md-12">
+	<%= form_for @roast, html: {class: 'form-horizontal'} do |f| %>
+
+	<div class='row col-md-12'>
+		<div class="col-md-5 center-block">
+			<div class="form-group">
+			  <%= f.label :Roast_method %>
+			  <%= f.text_field :roast_method, class: 'form-control' %>
+		 </div>
+		</div>
+	</div>
+
+		<div class="row col-md-12">
+		<div class='col-md-3 form-group'>
+		<%= f.label :Date_of_roast %>
+		<div class="input-group date" id="datepicker">
+		<%= f.text_field :date_of_roast, autocomplete: 'off', class: 'form-control', placeholder: 'dd/mm/yyyy' %>
+		<span class="input-group-addon">
+		<span class="glyphicon glyphicon-time"></span>
+    </span>
+		</div>
+		</div>
+
+		<div class="col-md-3 form-group">
+		<%= f.label :Time_of_roast %>
+		<div class='input-group date' id='timepicker'>
+		<%= f.text_field :time_of_roast, class: 'form-control' %>
+		<span class="input-group-addon">
+		<span class="glyphicon glyphicon-time"></span>
+		</span>
+		</div>
+		</div>
+
+	  <div class="col-md-6 form-group">
+		  <%= f.label :bean_species %>
+			<%= f.text_field :bean_species, class: 'form-control', placeholder: "ex: Arabica"  %>
+	  </div>
+
+  </div><!-- end row 2 -->
+
+  <div class="row col-md-12">
+	  <div class='col-md-6 form-group'>
+				<div id='timepicker'>
+					<%= f.label :Roast_time %>
+					<%= f.text_field :roast_time, class: 'form-control', placeholder: '(Seconds)' %>
+				</div>
+		</div>
+		
+		<div class="col-md-6 form-group">
+			<%= f.label :Roast_profile %>
+			<%= f.select :roast_profile,['Light', 'Medium', 'Meduim-dark', 'Dark'], {include_blank: true}, class: 'form-control' %>
+		</div>
+	</div>
+
+	<div class="row col-md-12">
+		<div class="col-md-4 form-group">
+			<%= f.label :Average_temperature_of_roast %>
+			<%= f.text_field :avg_temp_roast, class: 'form-control' %>
+		</div>
+
+		<div class="col-md-4 form-group">
+			<%= f.label :Raw_bean_weight %>
+			<%= f.text_field :raw_weight, class: 'form-control', placeholder: "(Grams)" %>
+		</div>
+
+		<div class="col-md-4 form-group">
+			<%= f.label :Storage_method_of_beans %>
+			<%= f.text_field :storage, class: 'form-control' %>
+		</div>
+	</div>
+
+	<div class="row col-md-12">
+	  <%= f.submit 'Create Roast', class: 'btn btn-coffee' %>
+	</div>
+<% end %>
+
+</div><!-- end wrapping row -->
+
+<%# target date_of_roast text_field for Bootstrap datepicker %>
+<%= javascript_tag do %>
+	$('#timepicker').datetimepicker({format: 'LT'});
+	$('#datepicker').datetimepicker({format: 'DD/MM/YYYY'});
+<% end %>
+
+
+
+
+

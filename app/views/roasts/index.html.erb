@@ -34,12 +34,14 @@
 						<td><%= roast.roast_method %></td>
 						<td><%= roast.date_of_roast.to_date %></td>
 						<td><%= roast.bean_species %></td>
+
 						<td><%= roast.formatted_roast_time %></td>
 						<td><%= link_to'view',roast_path(roast.id), class: 'btn btn-success' %></td>
 					</tr>
 					<% end %>
 				</tbody>
 			</table>
+			<%= link_to'Create new Roast', new_roast_path, class: 'btn btn-success' %>
 		</div>
 	</div>
 </div>
