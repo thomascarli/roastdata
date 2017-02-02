@@ -16,3 +16,18 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'bootstrap-datetimepicker';
+
+$coffee: #644C37;
+$coffee2: #B28F4F; 
+$white: #ffffff;
+.btn-coffee {
+	background-color: $coffee;
+	color: $white;
+
+}
+
+.btn-coffee2{
+	background-color: $coffee2;
+	color: $white;
+}

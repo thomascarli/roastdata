@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+
   devise_for :users
 
-  root to: 'roast#index'
+  root to: 'roasts#index'
 
-  resources :roast do
+  resources :roasts do
     resources :brew do
     end
   end

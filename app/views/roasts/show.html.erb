@@ -1,0 +1,27 @@
+<h2> Roast#show </h2>
+<%#= @roasts.inspect %>
+
+
+<h2>Roast id:</h2>
+	<p><%= @roasts.id %></p><br>
+
+<h2>Roast Method:</h2>
+	<p><%= @roasts.roast_method %></p><br>
+
+<h2>Roasted: </h2>
+	<p><%= time_ago_in_words(@roasts.date_of_roast) + ' ago' %></p><br>
+
+<h2>Roast id: </h2>
+	<p><%= @roasts.time_of_roast %></p><br>
+
+<h2>Bean Species: </h2>
+	<p><%= @roasts.bean_species %></p><br>
+
+<h2>Raw Weight: </h2>
+	<p><%= @roasts.raw_weight %></p><br>
+
+<h2>Storage method: </h2>
+	<p><%= @roasts.storage %></p><br>
+
+<%= link_to 'Home', root_path, class: 'btn btn-coffee' %>
+<%#= link_to 'Edit Roast Entry', edit_roast_path(@roasts.id), class: 'btn btn-coffee2' %>
