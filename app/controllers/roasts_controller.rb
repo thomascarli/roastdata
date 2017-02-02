@@ -20,7 +20,7 @@ class RoastsController < ApplicationController
   end
 
   def show
-  	@roasts = Roast.find(params[:id])
+  	@roast = Roast.find(params[:id])
   end
 
   private
