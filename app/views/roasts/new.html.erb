@@ -12,25 +12,25 @@
 		</div>
 	</div>
 
-		<div class="row col-md-12">
+	<div class="row col-md-12">
 		<div class='col-md-3 form-group'>
-		<%= f.label :Date_of_roast %>
-		<div class="input-group date" id="datepicker">
-		<%= f.text_field :date_of_roast, autocomplete: 'off', class: 'form-control', placeholder: 'dd/mm/yyyy' %>
-		<span class="input-group-addon">
-		<span class="glyphicon glyphicon-time"></span>
-    </span>
-		</div>
+			<%= f.label :Date_of_roast %>
+			<div class="input-group date" id="datepicker">
+				<%= f.text_field :date_of_roast, autocomplete: 'off', class: 'form-control', placeholder: 'dd/mm/yyyy' %>
+				<span class="input-group-addon">
+					<span class="glyphicon glyphicon-time"></span>
+		    </span>
+			</div>
 		</div>
 
 		<div class="col-md-3 form-group">
-		<%= f.label :Time_of_roast %>
-		<div class='input-group date' id='timepicker'>
-		<%= f.text_field :time_of_roast, autocomplete: 'off', class: 'form-control' %>
-		<span class="input-group-addon">
-		<span class="glyphicon glyphicon-time"></span>
-		</span>
-		</div>
+			<%= f.label :Time_of_roast %>
+			<div class='input-group date' id='timepicker'>
+				<%= f.text_field :time_of_roast, autocomplete: 'off', class: 'form-control' %>
+				<span class="input-group-addon">
+					<span class="glyphicon glyphicon-time"></span>
+				</span>
+			</div>
 		</div>
 
 	  <div class="col-md-6 form-group">
@@ -38,7 +38,7 @@
 			<%= f.text_field :bean_species, class: 'form-control', placeholder: "ex: Arabica"  %>
 	  </div>
 		<div class="col-md-6 form-group">
-			<%= f.label :bean_country_origin %>
+			<%= f.label :Bean_country_origin %>
 			<%= f.text_field :bean_country_origin, class: 'form-control', placeholder: "ex: Sumatra"  %>
 		</div>
 		<div class="col-md-6 form-group">
