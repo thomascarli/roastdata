@@ -1,0 +1,48 @@
+<div class='container'>
+	<h1>My Brews</h1>
+<hr>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+            <th>Roast Batch #</th>
+						<th>#</th>
+						<th>
+							Brew Method
+						</th>
+						<th>
+							Date of Brew
+						</th>
+						<th>
+							Quantity of Beans (grams)
+						</th>
+						<th>
+							Overall
+						</th>
+						<th>
+							view more...
+						</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<% @brews.each do |brew| %>
+					<tr>
+            <td><%= brew.roast.id %></td>
+						<td><%= brew.id %></td>
+						<td><%= brew.formatted_brew_method %></td>
+						<td><%= brew.formatted_time_of_brew %></td>
+						<td><%= brew.formatted_qty_of_beans %></td>
+						<td><%= brew.formatted_overall %></td>
+						<td><%= link_to'view',roast_brew_path(brew.roast.id, brew.id), class: 'btn btn-success' %></td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+      <%= link_to 'All Roasts', root_path, class: 'btn btn-coffee' %>
+		</div>
+	</div>
+</div>
