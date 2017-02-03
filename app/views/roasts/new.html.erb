@@ -37,17 +37,25 @@
 		  <%= f.label :bean_species %>
 			<%= f.text_field :bean_species, class: 'form-control', placeholder: "ex: Arabica"  %>
 	  </div>
+		<div class="col-md-6 form-group">
+			<%= f.label :bean_country_origin %>
+			<%= f.text_field :bean_country_origin, class: 'form-control', placeholder: "ex: Sumatra"  %>
+		</div>
+		<div class="col-md-6 form-group">
+			<%= f.label :bean_varietal_name %>
+			<%= f.text_field :bean_varietal_name, class: 'form-control', placeholder: "ex: Blue Thunder"  %>
+		</div>
 
   </div><!-- end row 2 -->
 
   <div class="row col-md-12">
 	  <div class='col-md-6 form-group'>
 				<div id='timepicker'>
-					<%= f.label :Roast_time %>
-					<%= f.text_field :roast_time, class: 'form-control', placeholder: '(Seconds)' %>
+					<%= f.label :roast_duration %>
+					<%= f.text_field :roast_duration, class: 'form-control', placeholder: '(Seconds)' %>
 				</div>
 		</div>
-		
+
 		<div class="col-md-6 form-group">
 			<%= f.label :Roast_profile %>
 			<%= f.select :roast_profile,['Light', 'Medium', 'Meduim-dark', 'Dark'], {include_blank: true}, class: 'form-control' %>
@@ -83,8 +91,3 @@
 	$('#timepicker').datetimepicker({format: 'LT'});
 	$('#datepicker').datetimepicker({format: 'DD/MM/YYYY'});
 <% end %>
-
-
-
-
-

@@ -34,7 +34,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'activemodel-serializers-xml', git: 'https://github.com/rails/activemodel-serializers-xml'
-gem 'draper'
+gem 'draper', github: 'audionerd/draper', branch: 'rails5'
 gem 'annotate', '~> 2.7', '>= 2.7.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

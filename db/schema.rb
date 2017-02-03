@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170201184057) do
+ActiveRecord::Schema.define(version: 20170203074555) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,21 +29,24 @@ ActiveRecord::Schema.define(version: 20170201184057) do
     t.integer  "user_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.datetime "date_of_brew"
   end
 
   create_table "roasts", force: :cascade do |t|
     t.string   "roast_method"
     t.datetime "date_of_roast"
     t.string   "bean_species"
-    t.integer  "roast_time"
+    t.integer  "roast_duration"
     t.datetime "time_of_roast"
     t.string   "roast_profile"
     t.integer  "avg_temp_roast"
     t.integer  "raw_weight"
     t.string   "storage"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.integer  "user_id"
+    t.string   "bean_country_origin"
+    t.string   "bean_varietal_name"
   end
 
   create_table "users", force: :cascade do |t|
