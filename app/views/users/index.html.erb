@@ -22,9 +22,6 @@
 						<th>
 							Overall
 						</th>
-						<th>
-							view more...
-						</th>
 					</tr>
 				</thead>
 
@@ -37,7 +34,6 @@
 						<td><%= brew.formatted_time_of_brew %></td>
 						<td><%= brew.formatted_qty_of_beans %></td>
 						<td><%= brew.formatted_overall %></td>
-						<td><%= link_to'view',roast_brew_path(brew.roast.id, brew.id), class: 'btn btn-success' %></td>
 					</tr>
 					<% end %>
 				</tbody>
