@@ -1,17 +1,24 @@
-<h3>Roast Method:</h3><h4><%= @roast.roast_method %></h4>
-<hr>
+<div>
+  <h3>Roast Method:</h3><h4><%= @roast.roast_method %></h4>
+  <hr>
+</div>
 
-<h3>Date of roast:</h3><h4><%= @roast.date_of_roast.strftime("%D") %></h4>
-<h3>Bean Species:</h3><h4><%= @roast.bean_species %></h4>
-<h3>Roast Time</h3><h4><%= @roast.formatted_roast_time %></h4>
-<h3>Time of Roast</h3><h4><%= @roast.time_of_roast.strftime(
-"%I:%M:%S %P") %></h4>
-<h3>Profile:</h3><h4><%= @roast.roast_profile %></h4>
-<h3>Average temp during roast:</h3><h4><%= @roast.avg_temp_roast %></h4>
-<h3>Raw weight of beans:</h3><h4><%= @roast.raw_weight.to_s + 'g' %></h4>
-<h3>Storage Method:</h3><h4><%= @roast.storage %></h4>
+<div>
+  <h3>Date of roast:</h3><%= @roast.roast_date %>
+  <h3>Bean Species:</h3><%= @roast.bean_species %>
+  <h3>Roast Duration</h3><%= @roast.formatted_roast_time %>
+  <h3>Time of Roast</h3><%= @roast.formattted_time_of_roast %>
+  <h3>Profile:</h3><%= @roast.formatted_roast_profile %>
+  <h3>Average temp during roast:</h3><%= @roast.avg_temp_roast %>
+  <h3>Raw weight of beans:</h3><%= @roast.formatted_raw_weight %>
+  <h3>Storage Method:</h3><%= @roast.formatted_storage %>
 
-<br>
-<hr>
-<%= link_to 'Home', root_path, class: 'btn btn-coffee' %>
-<%#= link_to 'Edit', edit_roast_path(@roast.id), class: 'btn btn-coffee2' %>
+  <br>
+  <hr>
+</div>
+
+<div>
+  <%= link_to 'Home', root_path, class: 'btn btn-coffee' %>
+  <%= link_to "Brews", roast_brew_index_path(@roast.id), class: 'btn btn-info' %>
+  <%#= link_to 'Edit', edit_roast_path(@roast.id), class: 'btn btn-coffee2' %>
+</div>
