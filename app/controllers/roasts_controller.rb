@@ -30,7 +30,9 @@ class RoastsController < ApplicationController
 			:roast_method,
 			:date_of_roast,
 			:bean_species,
-			:roast_time,
+			:bean_country_origin,
+			:bean_varietal_name,
+			:roast_duration,
 			:time_of_roast,
 			:roast_profile,
 			:avg_temp_roast,
@@ -38,6 +40,4 @@ class RoastsController < ApplicationController
 			:storage
 			)
 	end
-
-
 end

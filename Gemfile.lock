@@ -1,4 +1,15 @@
 GIT
+  remote: https://github.com/audionerd/draper.git
+  revision: e816e0e5876b76c648c0928f1c3f2aa2c7a3d1f2
+  branch: rails5
+  specs:
+    draper (2.1.0)
+      actionpack (>= 3.0)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0)
+
+GIT
   remote: https://github.com/rails/activemodel-serializers-xml
   revision: dd9c0acf26aab111ebc647cd8deb99ebc6946531
   specs:
@@ -77,11 +88,6 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
-    draper (2.1.0)
-      actionpack (>= 3.0)
-      activemodel (>= 3.0)
-      activesupport (>= 3.0)
-      request_store (~> 1.0)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.17)
@@ -206,7 +212,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise (~> 4.2)
-  draper
+  draper!
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)

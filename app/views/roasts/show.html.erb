@@ -5,9 +5,11 @@
 
 <div>
   <h3>Date of roast:</h3><%= @roast.roast_date %>
-  <h3>Bean Species:</h3><%= @roast.bean_species %>
-  <h3>Roast Duration</h3><%= @roast.formatted_roast_time %>
   <h3>Time of Roast</h3><%= @roast.formattted_time_of_roast %>
+  <h3>Bean Species:</h3><%= @roast.bean_species %>
+  <h3>Bean Country of Origin:</h3><%= @roast.formatted_bean_country_origin %>
+  <h3>Bean Varietal:</h3><%= @roast.formatted_bean_varietal %>
+  <h3>Roast Duration</h3><%= @roast.formatted_roast_duration %>
   <h3>Profile:</h3><%= @roast.formatted_roast_profile %>
   <h3>Average temp during roast:</h3><%= @roast.formatted_avg_temp_roast %>
   <h3>Raw weight of beans:</h3><%= @roast.formatted_raw_weight %>

@@ -6,7 +6,7 @@
 #  roast_method        :string
 #  date_of_roast       :datetime
 #  bean_species        :string
-#  roast_time          :integer
+#  roast_duration      :integer
 #  time_of_roast       :datetime
 #  roast_profile       :string
 #  avg_temp_roast      :integer
