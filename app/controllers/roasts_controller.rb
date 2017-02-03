@@ -2,7 +2,7 @@ class RoastsController < ApplicationController
 	before_action :authenticate_user!
 
   def index
-  	@roasts = Roast.all
+  	@roasts = Roast.all.decorate
   end
 
   def new
@@ -20,24 +20,24 @@ class RoastsController < ApplicationController
   end
 
   def show
-  	@roast = Roast.find(params[:id])
+  	@roast = Roast.find(params[:id]).decorate
   end
 
   private
 
-  	def roast_params
-  		params.require(:roast).permit(
-				:roast_method,
-				:date_of_roast,
-				:bean_species,
-				:roast_time,
-				:time_of_roast,
-				:roast_profile,
-				:avg_temp_roast,
-				:raw_weight,
-				:storage
-  			)
-  	end
+	def roast_params
+		params.require(:roast).permit(
+			:roast_method,
+			:date_of_roast,
+			:bean_species,
+			:roast_time,
+			:time_of_roast,
+			:roast_profile,
+			:avg_temp_roast,
+			:raw_weight,
+			:storage
+			)
+	end
 
 
 end

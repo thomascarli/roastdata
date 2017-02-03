@@ -6,7 +6,7 @@ class BrewController < ApplicationController
 
   def show
     roast
-    @brew = Brew.find(params[:id])
+    @brew = Brew.find(params[:id]).decorate
   end
 
   def create
@@ -15,7 +15,7 @@ class BrewController < ApplicationController
   private
 
   def roast
-    @roast ||= Roast.find(params[:roast_id])
+    @roast ||= Roast.find(params[:roast_id]).decorate
   end
 
 end
