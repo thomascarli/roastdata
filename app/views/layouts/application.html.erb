@@ -10,7 +10,11 @@
 
   <body>
   	<div class="container">
-	    <%= yield %>
+      <div class="row">
+        <div class="col-md-12">
+          <%= render 'shared/nav' %>
+    	    <%= yield %>
+        </div>
     </div>
   </body>
 </html>
