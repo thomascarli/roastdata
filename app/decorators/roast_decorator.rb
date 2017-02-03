@@ -33,4 +33,8 @@ class RoastDecorator < Draper::Decorator
     object.storage ? object.storage : "No Storage Specified."
   end
 
+  def formatted_avg_temp_roast
+    object.avg_temp_roast ? object.avg_temp_roast : "No Avg. Temp Roast Specified."
+  end
+
 end
