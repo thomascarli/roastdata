@@ -1,6 +1,6 @@
+
 <h1> New Roast</h1>
 
-<div class="row col-md-12">
 	<%= form_for @roast, html: {class: 'form-horizontal'} do |f| %>
 
 	<div class='row col-md-12'>
@@ -73,10 +73,10 @@
 
 	<div class="row col-md-12">
 	  <%= f.submit 'Create Roast', class: 'btn btn-coffee' %>
+	  <%= link_to'Cancel', root_path, class: 'btn btn-coffee2' %>
 	</div>
 <% end %>
 
-</div><!-- end wrapping row -->
 
 <%# target date_of_roast text_field for Bootstrap datepicker %>
 <%= javascript_tag do %>
