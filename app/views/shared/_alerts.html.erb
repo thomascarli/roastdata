@@ -1,0 +1,17 @@
+
+<% flash.each do |name, msg| %>
+  <div id='flash' class='alert alert-<%="#{name}"%>'>
+    <a href='#' class='close' data-dismiss='alert'>&#215;</a>
+    <%= content_tag :div, msg, id: "flash#{name}" if msg.is_a?(String) %>
+  </div>
+<% end %>
+
+<%# set a time out for 3 seconds to remove the notice div %>
+<%= javascript_tag do %>
+
+	setTimeout(function(){
+		$('#flash').fadeOut(500);
+		$('#flashnotice').empty();
+	}, 1500);
+
+<% end %>
