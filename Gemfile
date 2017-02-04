@@ -37,6 +37,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'activemodel-serializers-xml', git: 'https://github.com/rails/activemodel-serializers-xml'
 gem 'draper', github: 'audionerd/draper', branch: 'rails5'
 gem 'annotate', '~> 2.7', '>= 2.7.1'
+
+gem 'chartkick'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

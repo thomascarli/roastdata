@@ -20,8 +20,21 @@
 @import "font-awesome";
 
 $coffee: #644C37;
-$coffee2: #B28F4F; 
+$coffee2: #B28F4F;
 $white: #ffffff;
+
+html {
+	height: 100%
+}
+body {
+	height: inherit;
+}
+.container {
+	height: inherit;
+}
+.row {
+	height: inherit;
+}
 .btn-coffee {
 	background-color: $coffee;
 	color: $white;
@@ -64,4 +77,29 @@ $white: #ffffff;
 #error_explanation {
 	padding: 15px 15px 15px 30px;
 	margin-bottom: 30px;
+}
+.roast-show-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;;
+	align-items: center;
+	height: inherit;
+}
+
+.roast-data {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-align: left;
+	height: 60%;
+	width: 75%;
+}
+
+.left-text {
+	display: flex;
+	flex-direction: column;
+	width: 75%;
+	height: inherit;
+	align-items: baseline;
 }
