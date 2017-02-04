@@ -1,26 +1,54 @@
-<div>
-  <h3>Roast Method:</h3><h4><%= @roast.roast_method %></h4>
-  <hr>
-</div>
+<div class='roast-show-wrapper'>
+  <div class='left-text'>
 
-<div>
-  <h3>Date of roast:</h3><%= @roast.roast_date %>
-  <h3>Time of Roast</h3><%= @roast.formattted_time_of_roast %>
-  <h3>Bean Species:</h3><%= @roast.bean_species %>
-  <h3>Bean Country of Origin:</h3><%= @roast.formatted_bean_country_origin %>
-  <h3>Bean Varietal:</h3><%= @roast.formatted_bean_varietal %>
-  <h3>Roast Duration</h3><%= @roast.formatted_roast_duration %>
-  <h3>Profile:</h3><%= @roast.formatted_roast_profile %>
-  <h3>Average temp during roast:</h3><%= @roast.formatted_avg_temp_roast %>
-  <h3>Raw weight of beans:</h3><%= @roast.formatted_raw_weight %>
-  <h3>Storage Method:</h3><%= @roast.formatted_storage %>
+    <div>
+      <h3>Roast Method:</h3><%= @roast.roast_method %>
+    </div>
+    <div class='roast-data'>
+      <div class='roast-data-col'>
+        <div>
+          <h3>Date of roast:</h3><%= @roast.roast_date %>
+        </div>
+        <div>
+          <h3>Time of Roast</h3><%= @roast.formattted_time_of_roast %>
+        </div>
+        <div>
+          <h3>Bean Species:</h3><%= @roast.bean_species %>
+        </div>
+        <div>
+          <h3>Bean Country of Origin:</h3><%= @roast.formatted_bean_country_origin %>
+        </div>
+        <div>
+          <h3>Bean Varietal:</h3><%= @roast.formatted_bean_varietal %>
+        </div>
+      </div>
+      <div class='roast-data-col'>
+        <div>
+          <h3>Roast Duration</h3><%= @roast.formatted_roast_duration %>
+        </div>
+        <div>
+          <h3>Profile:</h3><%= @roast.formatted_roast_profile %>
+        </div>
+        <div>
+          <h3>Average temp during roast:</h3><%= @roast.formatted_avg_temp_roast %>
+        </div>
+        <div>
+          <h3>Raw weight of beans:</h3><%= @roast.formatted_raw_weight %>
+        </div>
+        <div>
+          <h3>Storage Method:</h3><%= @roast.formatted_storage %>
+        </div>
+      </div>
+    </div>
 
-  <br>
-  <hr>
-</div>
+    <div>
+      <%= link_to 'All Roasts', root_path, class: 'btn btn-coffee' %>
+      <%= link_to "Brews", roast_brew_index_path(@roast.id), class: 'btn btn-info' %>
+      <%#= link_to 'Edit', edit_roast_path(@roast.id), class: 'btn btn-coffee2' %>
+    </div>
+  </div>
 
-<div>
-  <%= link_to 'Home', root_path, class: 'btn btn-coffee' %>
-  <%= link_to "Brews", roast_brew_index_path(@roast.id), class: 'btn btn-info' %>
-  <%#= link_to 'Edit', edit_roast_path(@roast.id), class: 'btn btn-coffee2' %>
+  <div class='charts'>
+    <%= pie_chart @raw_roast.brews.group(:overall).count %>
+  </div>
 </div>

@@ -20,7 +20,8 @@ class RoastsController < ApplicationController
   end
 
   def show
-  	@roast = Roast.find(params[:id]).decorate
+		@raw_roast = Roast.find(params[:id])
+  	@roast = @raw_roast.decorate
   end
 
   private
