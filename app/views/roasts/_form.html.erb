@@ -1,4 +1,5 @@
 <%= form_for @roast, html: {class: 'form-horizontal'} do |f| %>
+  <%= render 'shared/error_messages', obj: @roast %>
 
   <div class='row col-md-12'>
     <div class="col-md-5 center-block">
@@ -77,7 +78,7 @@
   </div>
 
   <div class="row col-md-12">
-    <%= f.submit 'Save Roast', class: 'btn btn-coffee' %>
+    <%= f.submit 'Create Roast', class: 'btn btn-coffee' %>
     <%= link_to'Cancel', root_path, class: 'btn btn-coffee2' %>
   </div>
 <% end %>
