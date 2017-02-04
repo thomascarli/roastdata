@@ -9,6 +9,10 @@ class RoastsController < ApplicationController
   	@roast = Roast.new
   end
 
+	def edit
+		@roast = Roast.find(params[:id])
+	end
+
   def create
   	@roast = Roast.new(roast_params)
   	@roast.user_id = current_user.id
@@ -18,6 +22,15 @@ class RoastsController < ApplicationController
   		render :new
   	end
   end
+
+	def update
+		@roast = Roast.find(params[:id])
+		if @roast.update!(roast_params)
+			redirect_to @roast, notice: "Your Roast was successfully saved!"
+		else
+			render :edit
+		end
+	end
 
   def show
 		@raw_roast = Roast.find(params[:id])
