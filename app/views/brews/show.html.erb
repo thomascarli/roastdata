@@ -1,5 +1,50 @@
-<%= @brew.inspect %>
-<br>
-<%= link_to"Home", root_path, class: 'btn btn-success' %>
-<%= link_to "All Brews", roast_brews_path(@roast.id), class: 'btn btn-info' %>
-<%= link_to 'Edit', edit_roast_brew_path(@roast.id, @brew.id), class: 'btn btn-coffee2' %>
+<div class='roast-show-wrapper'>
+  <div class='left-text'>
+
+    <div>
+      <h3>Brew Method:</h3><%= @brew.formatted_brew_method %>
+    </div>
+    <div class='roast-data'>
+      <div class='roast-data-col'>
+        <div>
+          <h3>Date of Brew:</h3><%= @brew.formatted_date_of_brew %>
+        </div>
+        <div>
+          <h3>Time of Brew:</h3><%= @brew.formatted_time_of_brew %>
+        </div>
+        <div>
+          <h3>Qty of Beans:</h3><%= @brew.formatted_qty_of_beans %>
+        </div>
+        <div>
+          <h3>Texture:</h3><%= @brew.formatted_brew_texture %>
+        </div>
+      </div>
+      <div class='roast-data-col'>
+        <div>
+          <h3>Acidity:</h3><%= @brew.formatted_brew_acidity %>
+        </div>
+        <div>
+          <h3>Bitterness:</h3><%= @brew.formatted_brew_bitterness %>
+        </div>
+        <div>
+          <h3>Complexity:</h3><%= @brew.formatted_brew_complexity %>
+        </div>
+        <div>
+          <h3>Overall:</h3><%= @brew.formatted_brew_overall %>
+        </div>
+        <div>
+          <h3>Comments:</h3><%= @brew.formatted_brew_comments %>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <%= link_to"All Roasts", root_path, class: 'btn btn-success' %>
+      <%= link_to "All Brews", roast_brews_path(@roast.id), class: 'btn btn-info' %>
+      <%= link_to 'Edit', edit_roast_brew_path(@roast.id, @brew.id), class: 'btn btn-coffee2' %>
+    </div>
+  </div>
+
+  <div class='charts'>
+  </div>
+</div>
