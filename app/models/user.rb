@@ -15,6 +15,10 @@
 #  last_sign_in_ip        :inet
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  first_name             :string
+#  last_name              :string
+#  type                   :string
+#  user_type_id           :integer
 #
 
 class User < ApplicationRecord
@@ -24,4 +28,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
          
   has_many :brews
+  belongs_to :user_type
 end
