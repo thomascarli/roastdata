@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root to: 'roasts#index'
 
   resources :roasts do
-    resources :brew do
+    resources :brews do
     end
   end
 
