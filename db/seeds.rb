@@ -19,8 +19,25 @@ puts "look at config/db/seeds.rb for user names & passwords " + "\n\n"
 		user_id: @user2.id)
  end
 
- puts "20 Roasts have been created!"
+ 20.times do |brew|
 
+		Brew.create!(
+			roast_id:     "#{brew}",
+			brew_method: 'Chemex',
+			time_of_brew:  Date.today,
+			qty_of_beans: 25,
+			bitterness:   4,
+			complexity:   7,
+			acidity:      5,
+			overall:      8,
+			texture:      'smooth',
+			comments:     'rockin',
+			user_id:      @user2.id,
+			date_of_brew: Date.today)
+ end
+
+puts "20 Roasts have been created!"
+puts "20 Brews have been created!"
  
 
 
