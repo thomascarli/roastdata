@@ -26,11 +26,14 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
   has_many :brews
   belongs_to :user_type
 
   before_validation :assign_user_type
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :email, uniqueness: true
+
 
   def assign_user_type
     self.user_type = UserType.find_by(name: "Standard")
