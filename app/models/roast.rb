@@ -22,7 +22,7 @@
 class Roast < ApplicationRecord
 	has_many :brews
 
-	validates	:roast_method,			presence: true
+	validates	:roast_method,				presence: true
 	validates	:date_of_roast,				presence: true
 	validates	:bean_species,				presence: true
 	validates	:roast_duration,			presence: true

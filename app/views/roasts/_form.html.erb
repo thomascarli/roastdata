@@ -14,7 +14,7 @@
     <div class='col-md-3 form-group'>
       <%= f.label :Date_of_roast %>
       <div class="input-group date" id="datepicker">
-        <%= f.text_field :date_of_roast, autocomplete: 'off', class: 'form-control', placeholder: 'dd/mm/yyyy' %>
+        <%= f.text_field :date_of_roast, autocomplete: 'off', class: 'form-control' %>
         <span class="input-group-addon">
           <span class="glyphicon glyphicon-time"></span>
         </span>
@@ -78,7 +78,7 @@
   </div>
 
   <div class="row col-md-12">
-    <%= f.submit 'Create Roast', class: 'btn btn-coffee' %>
+    <%= f.submit 'Save Roast', class: 'btn btn-coffee' %>
     <%= link_to'Cancel', root_path, class: 'btn btn-coffee2' %>
   </div>
 <% end %>
@@ -87,5 +87,5 @@
 <%# target date_of_roast text_field for Bootstrap datepicker %>
 <%= javascript_tag do %>
 $('#timepicker').datetimepicker({format: 'LT'});
-$('#datepicker').datetimepicker({format: 'DD/MM/YYYY'});
+$('#datepicker').datetimepicker({format: 'YYYY/MM/DD'});
 <% end %>

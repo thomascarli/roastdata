@@ -25,7 +25,7 @@ class RoastsController < ApplicationController
 
 	def update
 		@roast = Roast.find(params[:id])
-		if @roast.update!(roast_params)
+		if @roast.update(roast_params)
 			redirect_to @roast, notice: "Your Roast was successfully saved!"
 		else
 			render :edit

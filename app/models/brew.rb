@@ -24,4 +24,8 @@ class Brew < ApplicationRecord
   belongs_to :roast
   belongs_to :user
 
+  validates	:brew_method,				presence: true
+  validates	:date_of_brew,			presence: true
+  validates	:overall, 	        presence: true
+
 end

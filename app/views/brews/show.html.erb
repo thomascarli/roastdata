@@ -1,0 +1,5 @@
+<%= @brew.inspect %>
+<br>
+<%= link_to"Home", root_path, class: 'btn btn-success' %>
+<%= link_to "All Brews", roast_brews_path(@roast.id), class: 'btn btn-info' %>
+<%= link_to 'Edit', edit_roast_brew_path(@roast.id, @brew.id), class: 'btn btn-coffee2' %>

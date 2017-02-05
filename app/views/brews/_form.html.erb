@@ -1,0 +1,83 @@
+<%= form_for [@roast,@brew], html: {class: 'form-horizontal'} do |f| %>
+  <%= render 'shared/error_messages', obj: @brew %>
+
+  <div class='row col-md-12'>
+    <div class="col-md-5 center-block">
+      <div class="form-group">
+        <%= f.label :brew_method %>
+        <%= f.text_field :brew_method, class: 'form-control' %>
+     </div>
+    </div>
+  </div>
+
+  <div class="row col-md-12">
+    <div class='col-md-3 form-group'>
+      <%= f.label :date_of_brew %>
+      <div class="input-group date" id="datepicker">
+        <%= f.text_field :date_of_brew, autocomplete: 'off', class: 'form-control' %>
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-time"></span>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-md-3 form-group">
+      <%= f.label :time_of_brew %>
+      <div class='input-group date' id='timepicker'>
+        <%= f.text_field :time_of_brew, autocomplete: 'off', class: 'form-control' %>
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-time"></span>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-md-6 form-group">
+      <%= f.label :qty_of_beans %>
+      <%= f.text_field :qty_of_beans, class: 'form-control', placeholder: "(grams)"  %>
+    </div>
+    <div class="col-md-6 form-group">
+      <%= f.label :texture %>
+      <%= f.text_field :texture, class: 'form-control', placeholder: "ex: full-bodied"  %>
+    </div>
+
+  </div>
+
+  <div class="row col-md-12">
+    <div class="col-md-4 form-group">
+      <%= f.label :bitterness %>
+      <%= f.text_field :bitterness, class: 'form-control', placeholder: "(1-10)" %>
+    </div>
+
+    <div class="col-md-4 form-group">
+      <%= f.label :acidity %>
+      <%= f.text_field :acidity, class: 'form-control', placeholder: "(1-10)" %>
+    </div>
+
+    <div class="col-md-4 form-group">
+      <%= f.label :complexity %>
+      <%= f.text_field :complexity, class: 'form-control', placeholder: "(1-10)" %>
+    </div>
+
+    <div class="col-md-4 form-group">
+      <%= f.label :overall %>
+      <%= f.text_field :overall, class: 'form-control', placeholder: "(1-10)" %>
+    </div>
+
+    <div class="col-md-4 form-group">
+      <%= f.label :comments %>
+      <%= f.text_area :comments, class: 'form-control', placeholder: "Misc. Comments" %>
+    </div>
+  </div>
+
+  <div class="row col-md-12">
+    <%= f.submit 'Save Brew', class: 'btn btn-coffee' %>
+    <%= link_to'Cancel', :back, class: 'btn btn-coffee2' %>
+  </div>
+<% end %>
+
+
+<%# target date_of_roast text_field for Bootstrap datepicker %>
+<%= javascript_tag do %>
+$('#timepicker').datetimepicker({format: 'LT'});
+$('#datepicker').datetimepicker({format: 'YYYY/MM/DD'});
+<% end %>
