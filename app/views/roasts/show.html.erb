@@ -49,6 +49,6 @@
   </div>
 
   <div class='charts'>
-    <%= pie_chart @raw_roast.brews.group(:overall).count %>
+    <%= column_chart @raw_roast.brews.group(:overall).count %>
   </div>
 </div>
