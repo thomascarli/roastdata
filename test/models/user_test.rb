@@ -3,7 +3,7 @@
 # Table name: users
 #
 #  id                     :integer          not null, primary key
-#  email                  :string           default(""), not null
+#  email                  :string           default("")
 #  encrypted_password     :string           default(""), not null
 #  reset_password_token   :string
 #  reset_password_sent_at :datetime
@@ -15,10 +15,11 @@
 #  last_sign_in_ip        :inet
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  user_type_id           :integer
 #  first_name             :string
 #  last_name              :string
-#  type                   :string
-#  user_type_id           :integer
+#  provider               :string
+#  uid                    :string
 #
 
 require 'test_helper'

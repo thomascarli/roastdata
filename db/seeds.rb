@@ -1,5 +1,21 @@
-@user1 = User.create(email: "seb@test.com", password: "asdfasdf", password_confirmation: "asdfasdf", first_name: 'seb', last_name: 'vez') 
-@user2 = User.create(email: "tom@test.com", password: "asdfasdf", password_confirmation: "asdfasdf", first_name: 'Tom', last_name: 'Carli')
+@user1 = User.create(
+	email: "seb@test.com",
+	password: "asdfasdf",
+	password_confirmation: "asdfasdf",
+	first_name: 'seb',
+	last_name: 'vez',
+	uid:'123456789',
+	provider: 'test_seeds')
+
+@user2 = User.create(
+	email: "tom@test.com",
+	password: "asdfasdf",
+	password_confirmation: "asdfasdf",
+	first_name: 'Tom',
+	last_name: 'Carli',
+	uid: '987654321',
+	provider: 'test_seeds')
+
 puts "2 Users created" + "\n\n"
 puts "look at config/db/seeds.rb for user names & passwords " + "\n\n"
 
