@@ -1,3 +1,6 @@
+UserType.create!(name:'Admin')
+UserType.create!(name:'Standard')
+
 @user1 = User.create(
 	email: "seb@test.com",
 	password: "asdfasdf",
@@ -18,9 +21,6 @@
 
 puts "2 Users created" + "\n\n"
 puts "look at config/db/seeds.rb for user names & passwords " + "\n\n"
-
-UserType.create!(name:'Admin')
-UserType.create!(name:'Standard')
 
  20.times do |roast|
  	Roast.create!(
