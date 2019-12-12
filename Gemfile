@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'devise', '~> 4.2'
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'bootstrap-sass', '~> 3.4'
 gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.43'
 gem "font-awesome-rails"
